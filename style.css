@@ -1,0 +1,194 @@
+body{
+  background-color: #FFF4A3;
+  color: #282A35;            
+  font-family: Arial, sans-serif;
+  flex-direction: column;
+  transition: background 0.5s, color 0.5s;
+}
+h1{ 
+  display: flex; 
+  justify-content: center; /* Horizontal centering */ 
+  align-items: center; /* Vertical centering */ 
+  height: 5vh; /* Full viewport height */ 
+}
+div.button ,div.player{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+.btn{
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #282A35;
+    color:#FFF4A3;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+.btn:hover{
+  color:#282A35 ;
+  background-color: #f9e07a;
+  transition: background 0.3s, color 0.3s;
+}
+body.night {
+  background-color: #282A35;
+  color: #FFF4A3;
+}
+
+body.night .btn {
+  background-color: #FFF4A3;
+  color: #282A35;
+}
+body.night .btn:hover{
+  color:#FFF4A3 ;
+  background-color: #2d2e35;
+  transition: background 0.3s, color 0.3s;
+}
+.toggle-switch {
+  position: relative;
+  width: 60px;   /* เล็กลงจาก 100 */
+  height: 30px;  /* เล็กลงจาก 50 */
+  --light: #FFF4A3;
+  --dark: #282A35;
+  --link: rgb(27, 129, 112);
+  --link-hover: rgb(24, 94, 82);
+}
+
+.switch-label {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: var(--dark);
+  border-radius: 15px;
+  cursor: pointer;
+  border: 2px solid var(--dark);
+}
+
+.checkbox {
+  position: absolute;
+  display: none;
+}
+
+.slider {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  transition: 0.3s;
+}
+
+.checkbox:checked ~ .slider {
+  background-color: var(--light);
+}
+
+.slider::before {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: var(--dark);
+  box-shadow: inset 6px -2px 0px 0px var(--light);
+  transition: 0.3s;
+}
+
+.checkbox:checked ~ .slider::before {
+  transform: translateX(30px);
+  background-color: var(--dark);
+  box-shadow: none;
+}
+
+.cards-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 0 20px 40px 20px;
+}
+.card {
+  background-color: #282A35;
+  color: #FFF4A3;
+  width: 200px;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: background 0.5s, color 0.5s;
+}
+.card img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+.card h2 {
+  text-decoration: none;
+  margin: 10px 0;
+  font-size: 18px;
+}
+.card h3{
+  text-decoration: none;
+  margin: 5px 0;
+  font-size: 14px;
+}
+.card a.btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 15px;
+  background-color: #FFF4A3;
+  color: #282A35;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background 0.3s, color 0.3s;
+}
+.card:hover{
+  cursor: pointer;
+  color:#282A35 ;
+  background-color: #f9e07a;
+  transition: background 0.3s, color 0.3s;
+}
+.card:hover a.btn{
+  color:#FFF4A3 ;
+  background-color: #282A35;
+  transition: background 0.3s, color 0.3s;
+}
+body.night .card:hover a.btn{
+  color:#282A35 ;
+  background-color: #FFF4A3;
+  transition: background 0.3s, color 0.3s;
+}
+.card a.btn:hover {
+  color:#282A35;
+  background-color: #e0c150;
+}
+body.night .card a.btn{
+  background-color: #282A35;
+  color: #FFF4A3;
+}
+body.night .card{
+  background-color: #FFF4A3;
+  color: #282A35;
+}
+body.night .card:hover{
+  color:#FFF4A3 ;
+  background-color: #2d2e35;
+  transition: background 0.3s, color 0.3s;
+}
+body.night .card a.btn:hover{
+  background-color: #282A35;
+  color:#FFF4A3;
+}
+#tierlist {
+  padding: 10px 20px;
+  font-weight: bold;
+  border-radius: 8px;
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
